@@ -1,6 +1,6 @@
-package thread.runnable;
+package thread;
 
-public class RunnabaleMain {
+public class LambdaThreadDemo {
 
     public static void main(String[] args) {
         Thread t = new Thread(() -> System.out.println("Thread executed"));
