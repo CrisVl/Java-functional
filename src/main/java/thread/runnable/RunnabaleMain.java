@@ -2,10 +2,13 @@ package thread.runnable;
 
 public class RunnabaleMain {
 
-
     public static void main(String[] args) {
-        RunnableDemo runnableDemo = new RunnableDemo();
-        Thread t = new Thread(runnableDemo);
-        runnableDemo.run();
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Thread executed");
+            }
+        });
+        t.start();
     }
 }
